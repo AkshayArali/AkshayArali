@@ -182,7 +182,24 @@
     <section id="experience" class="section">
         <h2 class="section-title">Experience</h2>
         <div class="experience-list">
-            
+
+            <article class="experience-card">
+                <div class="exp-header">
+                    <div>
+                        <h3>Research Assistant – ML, Bioacoustics</h3>
+                        <span class="company"><a href="https://www.birds.cornell.edu/ccb/elephant-listening-project/" target="_blank">Elephant Listening Project</a> · California State University, Chico</span>
+                    </div>
+                    <span class="date">Aug 2025 – Present</span>
+                </div>
+                <ul class="exp-details">
+                    <li>Owned end-to-end inference validation pipeline for elephant-audio models: Keras → ONNX → TFLite (CPU/XNNPACK) → TensorRT FP16/INT8 on NVIDIA Jetson Orin; designed conversion ladder to isolate accuracy vs. quantization regressions across runtimes and hardware targets.</li>
+                    <li>Designed runtime qualification workflows comparing FP32/FP16/INT8 artifacts against holdout datasets; benchmarked ~21K clips for accuracy, precision/recall, AUC, avg/p95 latency, and peak RAM across CPU (ONNX Runtime) and GPU (TensorRT).</li>
+                    <li>Implemented INT8 TensorRT calibration (IInt8EntropyCalibrator2) with holdout sampling; profiled quantization-induced metric shifts at fixed operating thresholds to harden inference reliability across custom accelerator targets.</li>
+                    <li>Hardened deployment preprocessing (training-aligned spectrogram/STFT pipeline) with a stable I/O contract across all runtimes; packaged inference engines, calibration caches, metrics tables, and a reproducible Jetson runbook.</li>
+                    <li>Built scalable preprocessing pipelines for 4,750+ hours (300GB+) of audio data; ran distributed model training and inference benchmarking on SDSC Expanse HPC (multi-GPU).</li>
+                </ul>
+            </article>
+
             <article class="experience-card">
                 <div class="exp-header">
                     <div>
